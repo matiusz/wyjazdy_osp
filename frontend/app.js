@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const leadersListDiv = document.getElementById('leadersList');
     
     try {
-        const response = await fetch('http://localhost:5000/people');
+        const response = await fetch('people.json');
         if (!response.ok) throw new Error('Błąd pobierania pliku');
         const people = await response.json();
         
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const carsListDiv = document.getElementById('carsList');
 
     try {
-        const response = await fetch('http://localhost:5000/cars');
+        const response = await fetch('cars.json');
         if (!response.ok) throw new Error('Błąd pobierania pliku');
         const cars = await response.json();
         
