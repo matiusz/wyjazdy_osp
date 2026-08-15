@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const leadersListDiv = document.getElementById('leadersList');
     
     try {
-        const response = await fetch('people.json');
+        const response = await fetch('http://localhost:5000/people');
         if (!response.ok) throw new Error('Błąd pobierania pliku');
         const people = await response.json();
         
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 
                 driversListDiv.appendChild(label);
             }
-            if(person[2]=="dowódca"){
+            if(person[2]=="dowodca"){
                 const label = document.createElement('label');
                 label.className = 'radio-item';
                 
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const carsListDiv = document.getElementById('carsList');
 
     try {
-        const response = await fetch('cars.json');
+        const response = await fetch('http://localhost:5000/cars');
         if (!response.ok) throw new Error('Błąd pobierania pliku');
         const cars = await response.json();
         
