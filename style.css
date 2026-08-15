@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6;
+    color: #1f2937;
+}
+
+header {
+    background: #2563eb;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+main {
+    padding: 1.5rem 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+#statusMessage {
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 600;
+    padding: 0.75rem;
+    border-radius: 8px;
+    display: none;
+}
+
+#statusMessage.success {
+    display: block;
+    background: #dcfce7;
+    color: #166534;
+}
+
+#statusMessage.error {
+    display: block;
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* NOWE STYLE DLA LISTY OSÓB */
+.checkbox-group {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 0.5rem;
+    background: white;
+}
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 0.5rem;
+    border-bottom: 1px solid #f3f4f6;
+    cursor: pointer;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+.checkbox-item:last-child {
+    border-bottom: none;
+}
+.checkbox-item input[type="checkbox"] {
+    width: auto;
+    margin-right: 12px;
+    transform: scale(1.3); /* Powiększenie checkboxa na telefon */
+    cursor: pointer;
+}
+.loading-text {
+    color: #6b7280;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* NOWE STYLE DLA LISTY OSÓB (JEDNOKROTNY WYBÓR) */
+.radio-group {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 0.5rem;
+    background: white;
+}
+.radio-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 0.5rem;
+    border-bottom: 1px solid #f3f4f6;
+    cursor: pointer;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+.radio-item:last-child {
+    border-bottom: none;
+}
+.radio-item input[type="radio"] {
+    width: auto;
+    margin-right: 12px;
+    transform: scale(1.3); /* Powiększenie radio buttona na telefon */
+    cursor: pointer;
+}

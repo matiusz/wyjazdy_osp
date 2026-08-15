@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raport po wydarzeniu</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#2563eb">
+</head>
+<body>
+    <header>
+        <h1>Wyjazdy</h1>
+    </header>
+    <main>
+        <form id="eventForm">
+            <!-- ZMIENIONA SEKCJA OSÓB -->
+            <div class="form-group">
+                <label>Samochód</label>
+                <div id="carsList" class="radio-group">
+                    <p class="loading-text">Ładowanie listy pojazdów...</p>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="eventTimeStart">Data i czas wyjazdu:</label>
+                <input type="datetime-local" id="eventTimeStart" required>
+            </div>
+
+            <div class="form-group">
+                <label for="startingMileage">Przebieg startowy</label>
+                <input type="number" id="eventTimeStart" required value="1000">
+            </div>
+
+            <div class="form-group">
+                <label for="eventTimeEnd">Data i czas powrotu:</label>
+                <input type="datetime-local" id="eventTimeEnd" required>
+            </div>
+
+            <div class="form-group">
+                <label for="endingMileage">Przebieg końcowy</label>
+                <input type="number" id="eventTimeStart" required value="1000">
+            </div>
+
+            <div class="form-group">
+                <label>Kierowca</label>
+                <div id="driversList" class="radio-group">
+                    <p class="loading-text">Ładowanie listy kierowców...</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Dowódca</label>
+                <div id="leadersList" class="radio-group">
+                    <p class="loading-text">Ładowanie listy dowódców...</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Obecne osoby (zaznacz z listy):</label>
+                <div id="peopleList" class="checkbox-group">
+                    <p class="loading-text">Ładowanie listy osób...</p>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="activities">Wykonywane czynności:</label>
+                <textarea id="activities" rows="4" placeholder="Opisz, co dokładnie było robione..." required></textarea>
+            </div>
+            
+            <button type="submit">Wyślij Raport</button>
+        </form>
+        <div id="statusMessage"></div>
+    </main>
+    
+    <script src="app.js"></script>
+</body>
+</html>
